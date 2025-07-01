@@ -1,0 +1,13 @@
+<?php
+
+echo "Ejercicio 1\n";
+
+$array = [1, 2, 3, 4, 5];
+
+echo "Imprimiendo los valores de un array.\nNúmeros Enteros: ";
+
+for ($i = 0; $i < count($array); $i++) {
+    echo $array[$i] . " ";
+}
+
+?>
