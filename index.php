@@ -66,4 +66,28 @@ $datos = [
 
 echo "Declaración de array asociativo de datos personales.\n";
 
+echo "\nEjercicio 5\n";
+
+$array1 = [2, 5.5, 7, 10, 3.2];
+$array2 = [6, 1.7, 2, 16, 5.5];
+$arrayComunes = [];
+$arrayUnicos = [];
+
+foreach ($array1 as $valor1) {
+    foreach ($array2 as $valor2) {
+        if ($valor1 == $valor2) {
+            $arrayComunes[] = $valor1;
+        }
+    }
+}
+
+$arrayUnicos = array_merge($array1, $array2);
+$arrayUnicos = array_unique($arrayUnicos);
+$arrayUnicos = array_values($arrayUnicos);
+
+echo "Imprimiendo la intersección de dos arrays.\n";
+print_r($arrayComunes);
+echo "\nImprimiendo la mezcla de dos arrays.\n";
+print_r($arrayUnicos);
+
 ?>
