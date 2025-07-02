@@ -90,4 +90,25 @@ print_r($arrayComunes);
 echo "\nImprimiendo la mezcla de dos arrays.\n";
 print_r($arrayUnicos);
 
+echo "\nEjercicio 6\n";
+
+$registro = [
+    "Juan" => [2, 5, 7, 8, 2],
+    "Pedro" => [6, 6, 5, 2, 9],
+    "Pablo" => [1, 1, 4, 6, 8]
+];
+
+$global = 0;
+foreach ($registro as $nombre => $notas) {
+    $suma = 0;
+    foreach ($notas as $nota) {
+        $suma += $nota;
+    }
+    $promedio = $suma/5;
+    echo "El promedio de " . $nombre . " es de " . $promedio . " puntos.\n";
+    $global += $promedio;
+}
+
+echo "El promedio global de la clase es de " . $global . " puntos.\n";
+
 ?>
