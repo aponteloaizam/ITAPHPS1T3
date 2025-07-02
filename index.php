@@ -55,4 +55,15 @@ function validar(array $palabras, string $caracter): bool {
 
 echo "Desarrollo de función que valida si un caracter se encuentra en todas las palabras de un array.\n";
 
+echo "\nEjercicio 4\n";
+
+$datos = [
+    "nombre" => "Ale",
+    "edad" => 36,
+    "email" => "aponteloaizam@gmail.com",
+    "comida" => "Café"
+];
+
+echo "Declaración de array asociativo de datos personales.\n";
+
 ?>
