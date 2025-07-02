@@ -29,4 +29,30 @@ print_r($x);
 
 echo "El tamaño del nuevo array es de " . count($x) . " valores.\n";
 
+echo "\nEjercicio 3\n";
+
+$palabras = [];
+$caracter = "";
+
+function validar(array $palabras, string $caracter): bool {
+    $contador = 0;
+    $resultado = false;
+    foreach ($palabras as $valor) {
+        $valor = strtolower($valor);
+        $caracter = strtolower($caracter);
+        for ($i = 0; $i < strlen($valor); $i++) {
+            if ($valor[$i] == $caracter) {
+                $contador++;
+                break;
+            }
+        }
+    }
+    if ($contador == count($palabras)) {
+        $resultado = true;
+    }
+    return $resultado;
+}
+
+echo "Desarrollo de función que valida si un caracter se encuentra en todas las palabras de un array.\n";
+
 ?>
